@@ -3,7 +3,7 @@ let score = "33abc";
 console.log(typeof score); //string
 console.log(score); //33abc
 
-let valueInScore = Number(score); //typr converion of string score to Number
+let valueInScore = Number(score); //type converion of string score to Number
 console.log(typeof valueInScore); //number
 console.log(typeof score); //string
 console.log(valueInScore); //NaN not a number
@@ -21,7 +21,7 @@ console.log(testVariableValue); //NaN
 // in case of true consolelog will be 1
 console.log(typeof NaN); //number
 //the takeaway from the number conversion is that , consider you are at backend work
-//and a variable which should store number and also its type of is number but it
+//and a variable which should store number and also its typeof is number, but it
 //could have NaN as value like in ValueInScore variable .
 
 let loggedin = "";

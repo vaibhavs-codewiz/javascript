@@ -16,7 +16,7 @@ console.log(undefined >= 0); //false
 //avoid use of this type of comparisons .
 
 //strict check ===
-console.log("2" === 2);
+console.log("2" === 2); //false
 // === also checks the data type of comparators .
 
 const userId = Symbol("123");
