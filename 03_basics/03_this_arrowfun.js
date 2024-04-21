@@ -7,7 +7,7 @@ const user = {
   entryCode: 519,
   welcomeMessage: function () {
     console.log(`${this.userName}, welcome to website .`); //if user name updated then also log recent user name because of this (current context) .//writing this is cumpolsory.
-    console.log(this); //console log object user (current context) .
+    console.log(this); //console log object(calling object) user (current context) .
   },
 };
 
@@ -100,3 +100,24 @@ const usethis = {
 
 usethis.welcome();
 usethis.welcome2();
+
+//behaviour of this inside browser : when logged in
+
+// global area refer window object
+//inside a function body again refer to window object
+//inside a method body refer to calling object
+//inside HTML event handeler refer to element for which event has executed.
+
+//behaviour of this in node environment :
+
+//global area logs {} empty object .
+//inside a function body shows related to performance .
+//inside a method body refer to calling object.
+
+var x = 30;
+let fun = function () {
+  var x = 10;
+  console.log(this);
+  console.log(this.x); //undefined
+};
+fun();
