@@ -44,3 +44,6 @@ switch (month) {
     console.log("wrong input");
     break;
 }
+
+// learn every day
+

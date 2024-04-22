@@ -69,3 +69,5 @@ console.log(val3); //10
 //ternary operator
 
 //syntax = condtion ? true : false
+
+//learn every day
