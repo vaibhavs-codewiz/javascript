@@ -19,9 +19,7 @@ addNumbers(10, 29); //here we call them arguments, if argument not pass then NaN
 
 function addIntegers(numb1, numb2) {
   return numb1 + numb2;
-}
-
-let sum = addIntegers(12.4, 7.6);
+}var sum = addIntegers(12.4, 7.6);
 console.log(sum);
 
 function strValue(username) {
@@ -46,7 +44,8 @@ function setDefault(username = "samay") {
 
 console.log(setDefault());
 
-//shopping cart problem :: prgmr not know how many parameter to recieve in function so to create such function use rest operator (solution)
+//shopping cart problem :: prgmr not know how many parameter to recieve 
+//in function so to create such function use rest operator (solution)
 
 //rest operator
 
@@ -91,3 +90,20 @@ function printArray(anyArray) {
 }
 
 console.log(printArray(myArray));
+
+//important about function without {}
+
+function returnNo(a,b) {
+  return a+b;//remember when {}scope starts, we explicitly need to return the sum
+}
+let sumNo = (a,b) => (a+b);//no need of return when there is no scope{}
+let sumNumb = (a,b) => a+b;
+let objret = () => ({username: 'samay'});//return object
+
+var addit = sumNo(1,2);
+var addi = sumNumb(1, 3);
+var add = sumNo(1, 2);
+
+
+
+

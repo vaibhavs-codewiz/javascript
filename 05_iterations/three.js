@@ -33,9 +33,22 @@ for(let it in myObject)
 }
 for(const it in name)
 {
-    console.log(it);
+    console.log(it);//logs key that is index in case of array of character
+    console.log(name[it]);//logs value of array
 }
 for(const it in array)
 {
-    console.log(it);
+    console.log(it);//logs key of array i.e., its indexes 
+    console.log(array[it]);//now it logs value 
+}
+
+//for in loop on map 
+// is not iterable over map:
+const map = new Map();
+
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
+for (const key in map) {
+    console.log(key);
 }
