@@ -41,6 +41,24 @@ for (let index = 1; index < 21; index++) {
    {
     console.log(`only skip 5 and log every other element from 1 to 20`);
    }
-   console.log(`index value is ${index}`);
-    
+   console.log(`index value is ${index}`);   
 }
+
+//while loop
+
+let char = ['a','bb','ccc','dddd'];
+let index = 0;
+while (index < char.length) {
+    console.log(char[index]);
+    index = index + 1;
+}
+
+// do while loop
+
+let score = 21
+do
+{
+    console.log(`value of score is ${score}`);
+    score++;
+
+}while(score <= 25);
