@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : create element</title>
+</head>
+<body style="background-color: #212121;">
+    <div class="parent" style="color: aliceblue;">
+        <li class="day">monday</li>
+        <li class="day">tuesday</li>
+        <li class="day">wednesday</li>
+        <li class="day">thursday</li>
+    </div>
+    <script>
+       const selection = document.querySelector(".parent");
+       console.log(selection);//console logged whole div
+       console.log(selection.children);//this property return HTML collection
+       console.log(selection.children[1].innerHTML);//tuesday
+
+       for(let i =0; i<selection.children.length ; i++)
+       {
+        console.log(selection.children[i].innerHTML);
+        selection.children[i].style.backgroundColor = "lightblue";
+        selection.children[i].style.color = "black";
+        selection.children[i].style.borderRadius = "15px";
+        selection.children[i].style.margin = "8px";
+        selection.children[i].style.width = "30%";
+        selection.children[i].style.padding = "10px";
+        selection.children[i].style.boxShadow = "5px 5px #888888";
+       }
+    </script>
+</body>
+</html>
