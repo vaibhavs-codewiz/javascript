@@ -1,11 +1,11 @@
 # projects related to DOM :
 
 
-## Javascript code :
+## Javascript code : for color change project .
 
 ```
 let buttons = document.querySelectorAll(".button");
-button.forEach(function (button)
+buttons.forEach(function (button)
 {
     button.addEventListener("click",function (event)
     {
