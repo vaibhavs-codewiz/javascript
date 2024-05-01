@@ -3,7 +3,7 @@
 
 ## Javascript code : for color change project .
 
-```
+```javascript
 let buttons = document.querySelectorAll(".button");
 buttons.forEach(function (button)
 {
@@ -36,7 +36,7 @@ buttons.forEach(function (button)
 ```
  ## javascript code for : BMI calculator .
 
- ``` 
+ ```javascript
  //at first select the form 
 const form = document.querySelector("form");
 
@@ -66,4 +66,14 @@ results.innerHTML = `<span>${bmi}</span>`;
 }
 
 });
+ ```
+ ## project 3 : digital clock 
+
+ ```javascript
+const clock = document.querySelector("#clock");
+//to make function execute regular interval , use set interval with parameter function to execute and interval in ms.
+setInterval(function (){
+  const date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
  ```
