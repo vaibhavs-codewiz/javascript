@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+   <!-- js is a sequentially run language .
+   but events are exception in this as they do not execute with sequence but only when 
+   event takes place . -->
+   <h2>understanding JS events .</h2>
+   <ul id="images">
+    <li><img src="https://picsum.photos/id/31/200" id="first" onclick="alert('wow')"></li>
+    <li><img src="https://picsum.photos/id/78/200" id="second"></li>
+    <li><img src="https://picsum.photos/200" id="third"></li>
+    <li><a style="color: aliceblue" href="https://google.com" id="google">Google</a></li>
+   </ul>
+</body>
+<script>
+    //    document.getElementById("second").onclick = function(){
+    //    alert("cooool");
+    //}
+    //the best way to add event is using add an event listener as it provide 
+    //more features compared to onclick event in html tag and using getelementbyid.
+    //during early times attachEvent() method used
+    //jQuery uses onEvent() to add the event. 
+
+    document.getElementById("third").addEventListener("click",function(e){
+    alert("this is best");
+    console.log(e.timeStamp);
+    console.log(e.clientX);
+    })
+    //some of features to be remember about JS event listener helpful for interviews
+    //and projects are :
+
+    //type , timeStamp(tell the time at which event took place) ,defaultPrevented,
+    //target,toelement,srcelement ,currentTarget, clientX,clientY,screenX,screenY,
+    //altkey,ctrlkey,shiftkey,keycode
+
+    //third parameter (optional) in addEventlistener called event capturing ::
+    //this paramter takes value as boolean :
+    //if true : event in capture phase.
+    //if false : event in bubbling phase.(default case)
+    //during bubbling phase event at inside tag is at priority and vice versa
+    // example ::--
+
+    document.getElementById("images").addEventListener('click',function(e){
+      console.log('ul got clicked');
+    },false);
+    document.getElementById("second").addEventListener('click',function(e){
+      console.log('li got clicked');
+      e.stopPropagation();
+    },false);
+    //due to false(bubbling) when li clicked output = ligotclicked ulgotclicked
+    
+    //  document.getElementById("images").addEventListener('click',function(e){
+    //   console.log('ul got clicked');
+    // },true);
+    // document.getElementById("second").addEventListener('click',function(e){
+    //   console.log('li got clicked');
+    // },true);
+    //due to capture phase, since li also part of ul so output ulgotclicked ligotclicked
+
+    //to avoid the bubbling of event , use event.stopPropagation();
+    document.getElementById("google").addEventListener('click',function(e){
+        e.preventDefault();
+    });
+</script>
+</html>
