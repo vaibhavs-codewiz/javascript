@@ -45,14 +45,16 @@
     //during bubbling phase event at inside tag is at priority and vice versa
     // example ::--
 
-    document.getElementById("images").addEventListener('click',function(e){
-      console.log('ul got clicked');
-    },false);
-    document.getElementById("second").addEventListener('click',function(e){
-      console.log('li got clicked');
-      e.stopPropagation();
-    },false);
+    // document.getElementById("images").addEventListener('click',function(e){
+    //   console.log('ul got clicked');
+    // },false);
+    // document.getElementById("second").addEventListener('click',function(e){
+    //   console.log('li got clicked');
+    //   e.stopPropagation();
+    // },false);
+    
     //due to false(bubbling) when li clicked output = ligotclicked ulgotclicked
+    //due to true(capture phase) when li clicked output = ulgotclicked ligotclicked
     
     //  document.getElementById("images").addEventListener('click',function(e){
     //   console.log('ul got clicked');
@@ -64,7 +66,34 @@
 
     //to avoid the bubbling of event , use event.stopPropagation();
     document.getElementById("google").addEventListener('click',function(e){
-        e.preventDefault();
+       // e.preventDefault();//prevent the default behaviour of event.(bubbling here)
     });
+    
+    //removing the image or any element:
+    document.getElementById('images').addEventListener('click',function(e){
+      //console.log(e);//click event
+      //console.log(e.target);//image that clicked
+      //console.log(e.target.parentNode);//li tag under which image exist is parent.
+      let remElement = e.target;
+     // remElement.parentNode.remove();//this will bring us to ul and remove all images and link.
+     if(remElement.tagName === "IMG") 
+     {
+       console.log(remElement.tagName);
+       remElement.remove();
+     }
+       console.log(remElement.tagName);
+
+      //document.getElementById('third').parentNode.remove();//li of image 3.
+
+      //another style to remove the element is remove child :
+
+     // let rembyChild = remElement.parentNode;//parent of li is ul
+      //rembyChild.removeChild(remElement);//pass child as parameter
+     });
+    //cannot apply two event listener on single element.
+
+    //important TBR that wherever you click is the event and if clicked on list the parent
+    //of list i.e., ul will get remove. to handle this use if else condition with tag name 
+      
 </script>
 </html>
