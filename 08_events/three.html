@@ -1,0 +1,26 @@
+<!-- create start stop buttons to start and stop printing using buttons . -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>project using setInterval</title>
+</head>
+<body style="background-color: #414141; color:rgb(139, 108, 63)">
+    <h1>click to start printing and stop for stop printing</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const clicktostart = function(){
+        let para = document.createElement('p');
+        document.body.appendChild(para).innerHTML = 'i got printed.';
+    };
+    document.querySelector('#start').addEventListener('click',function(){
+        let started = setInterval(clicktostart,1000);
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearInterval(started);
+        })
+    });
+</script>
+</html>
