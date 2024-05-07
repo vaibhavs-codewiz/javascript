@@ -1,0 +1,63 @@
+<!-- mini project on keydown event -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>press key </title>
+    <style>
+        table,
+      th,
+      td {
+        border: 1px solid #e7e7e7;
+        color:#e7e7e7;
+      }
+        .project {
+        background-color: #1c1c1c;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+      body{
+        background-color: #8b7575;
+        color: aliceblue;
+      }
+      .color {
+        color: rgb(2, 22, 40);
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+</head>
+<body>
+    <h1>press key to get detail</h1>
+     <div class="project">
+      <div id="insert">
+        Press the key and watch magic
+      </div>
+    </div>
+</body>
+<script>
+    let insert = document.querySelector("#insert");
+    window.addEventListener('keydown',function (e) {
+       insert.innerHTMl = 
+`<div class='color'>
+<table>
+   <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>click</td>
+    <td>click</td>
+    <td>click</td>
+  </tr>
+</table>
+</div>`;
+    });
+</script>
+</html>

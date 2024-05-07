@@ -20,12 +20,9 @@ Example: A function that reads a large file from disk synchronously (without usi
 Execution Continues: Non-blocking code allows other code to run while it's performing a task. It achieves this by using asynchronous operations, which don't require the main thread to wait for completion. Think of it like a car that can pull over to let other cars pass while it waits for something (like a network request to finish).
 Example: Downloading a file using an asynchronous function with callbacks or promises wouldn't block the main thread. The program can continue executing other code while the download happens in the background.
 
-* which code to use is depend on use case . example it is better to use blocking code when writing code for user registration because if not written then during the writing the details at database take time and non block code might show user registration succes or fail without process completion 
+* which code to use is depend on use case . example it is better to use blocking code when writing code for user registration because if not written then during writing the details at database take time and non block code might show user registration succes or fail without process completion 
 
 * API in js :
-In JavaScript (JS), APIs (Application Programming Interfaces) act as intermediaries between your JavaScript code and external functionalities. They provide a structured way for your code to access features or data from other sources, like web servers, databases, or even other web pages.
-
-* api in javascript :
 In JavaScript (JS), APIs (Application Programming Interfaces) act as intermediaries between your JavaScript code and external functionalities. They provide a structured way for your code to access features or data from other sources, like web servers, databases, or even other web pages.
 
 # js engine with web API manage by event loop :-
@@ -47,6 +44,7 @@ A callback function associated with the operation is added to the callback queue
 The main thread continues executing code in the call stack.
 When the call stack becomes empty (i.e., current code finishes), the event loop checks the callback queue.
 If there are callbacks waiting, the event loop takes one callback at a time, adds it to the call stack, and executes it.
+
 Web APIs:
 
 Browser Features: Web APIs are a set of functionalities provided by the web browser that JavaScript can leverage. These APIs allow JavaScript to interact with the browser environment, perform actions like DOM manipulation, network requests, user input handling, and more.

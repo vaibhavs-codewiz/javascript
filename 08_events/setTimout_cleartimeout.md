@@ -32,4 +32,9 @@ The identifier of the timeout you want to cancel. This ID was returned by the co
 
 ## set interval and clear interval 
 
-* 
+* window interface
+window interface is basically the thing that lets JavaScript interact with that document and the browser itself. It's like a special toolbox with all the right screwdrivers and wrenches to work on that webpage.
+Here's the cool part: there's a global variable in JavaScript called simply window. It's like the main command center for this toolbox. Through window, you can access a bunch of properties and methods to control different aspects of the webpage.
+
+The setInterval() method, offered on the Window and WorkerGlobalScope interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling clearInterval().
