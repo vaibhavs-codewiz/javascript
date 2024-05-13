@@ -1,12 +1,12 @@
-# js is synchronous and single thread language :
+# js is synchronous and single thread language : understand the call back hell :-
 Single-threaded: This means JavaScript has one execution thread. Imagine a single lane road where instructions (code) get processed one after another. Only one instruction can be carried out at a time.
 
 Synchronous: This refers to how JavaScript handles tasks. Synchronous means tasks must be completed sequentially, in the order they appear in the code.  Think of it like waiting at a traffic light. The code execution halts  until the current task finishes before moving on to the next one.
 
-* this behaviour of js is default but js not let this weak point to become a major problem (problem major when using standalone js engine) . It is not a problem as there is no js standalone engine present it is always in runtime environment like in browser node 
+* this behaviour of js is default but js not let this weak point to become a major problem (problem major when using standalone js engine) . It is not a problem as there is no js standalone engine present it is always in runtime environment like in browser , node 
 
 ## js code execution context :
-* the code is executed one line of code at a time in js, each operation waits for last one to get completed . 
+* the code is executed one line of code at a time in js, each operation waits for previous one to get completed . 
 
 ## blocking code versus non - blocking code :-
 js have 2 types of codes :
@@ -51,3 +51,28 @@ Browser Features: Web APIs are a set of functionalities provided by the web brow
 Asynchronous Operations: Many Web API functionalities involve asynchronous operations. For instance, making a network request using the Fetch API doesn't block the main thread. Instead, the browser handles the request in the background and eventually triggers a callback function when the response is received.
 Interaction with Event Loop: Web APIs don't directly execute code within the JavaScript engine. Instead, they schedule callbacks through the event loop. When a Web API function is called to perform an asynchronous task, the corresponding callback function is added to the callback queue.
 
+since js is single threaded and synchronous thus , the multi threading is possible in js with the help of call back functions(one of the options).
+
+# call back functions in javascript :-
+Callback functions are a fundamental concept in JavaScript for handling asynchronous operations. Imagine you call a friend and ask them to pick up some groceries for you. You give them a list (the function) and tell them to call you back (the callback) once they're done shopping (the asynchronous task).
+
+How Callbacks Work:
+
+Initiate the Asynchronous Operation: You call a function that performs an asynchronous task, like fetching data from a server or reading a file.
+Pass the Callback: This function usually takes another function as an argument, which is the callback.
+Code Continues: The main program doesn't wait for the asynchronous task to finish. It continues executing other code.
+Task Completion: Once the asynchronous operation finishes, the function you called earlier executes the callback function you provided.
+Callback Receives Results (or Errors): The callback function gets the result of the asynchronous task (your groceries) or an error message (if something went wrong).
+Callback Hell:
+
+Things can get messy when you chain multiple asynchronous operations together, each relying on a callback from the previous one. This creates a nested structure of functions within functions, resembling a pyramid. This is known as "callback hell."
+
+Here's why callback hell is bad:
+
+Hard to Read: Nested callbacks make code difficult to understand and follow the flow of logic.
+Error Prone: With many nested levels, keeping track of errors and data flow becomes challenging.
+Difficult to Maintain: As the codebase grows, modifying or debugging code in callback hell can be a nightmare.
+
+The Hero: Promises
+
+Promises were introduced in JavaScript to address the problems of callback hell. They provide a cleaner and more structured way to handle asynchronous operations. 
