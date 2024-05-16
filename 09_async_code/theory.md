@@ -3,7 +3,7 @@ Single-threaded: This means JavaScript has one execution thread. Imagine a singl
 
 Synchronous: This refers to how JavaScript handles tasks. Synchronous means tasks must be completed sequentially, in the order they appear in the code.  Think of it like waiting at a traffic light. The code execution halts  until the current task finishes before moving on to the next one.
 
-* this behaviour of js is default but js not let this weak point to become a major problem (problem major when using standalone js engine) . It is not a problem as there is no js standalone engine present it is always in runtime environment like in browser , node 
+* this behaviour of js is default but js not let this weak point to become a major problem (problem major when using standalone js engine) . It is not a problem as there is no js standalone engine present it is always in runtime environment like in browser , node .
 
 ## js code execution context :
 * the code is executed one line of code at a time in js, each operation waits for previous one to get completed . 
@@ -76,3 +76,14 @@ Difficult to Maintain: As the codebase grows, modifying or debugging code in cal
 The Hero: Promises
 
 Promises were introduced in JavaScript to address the problems of callback hell. They provide a cleaner and more structured way to handle asynchronous operations. 
+
+# promise :-
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback hell.
+
+in call back function(asynchronous function), functions are passed as argument which creates confusion but in promise , function (asynchronous function) return the promise object which based upon internal code provide two call back function reject or resolved, reject function generates error.
+promise object as a key value pair have :- prototype : promise , promise state : fulfilled or rejected and promise result : parameter of resolve and reject function .
+
+promise object has 2 methods associated with it then() and catch() , then() work when promise got fulfilled and catch when promise rejected .
+then and catch methods have callback functions as argument .
