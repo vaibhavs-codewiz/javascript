@@ -40,6 +40,7 @@ for (let index = 1; index < 21; index++) {
    if(index == 5)
    {
     console.log(`only skip 5 and log every other element from 1 to 20`);
+    continue;
    }
    console.log(`index value is ${index}`);   
 }

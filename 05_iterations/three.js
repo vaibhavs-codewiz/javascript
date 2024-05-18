@@ -52,3 +52,6 @@ map.set("c", 3);
 for (const key in map) {
     console.log(key);
 }
+//for in loop :
+//iterable on object, array, string.
+//not iterable on map.
