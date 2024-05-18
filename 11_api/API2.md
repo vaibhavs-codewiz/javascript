@@ -37,8 +37,30 @@ examples :
 400 bad request 
 500 internal server error
 # adding information in urls
-we add query sting in url to add information example below :
+we add query string in api to add additional information, example below (ex is for url but similar on api also):
 https://google.com/search?q=india+election
-here after .com we added quert (key value)
+here after .com we added query (key value)
+/search?name=vaibhav&branch=cs
 
-* we can also use this api to get further information about api .
+* we can also use this api to fetch further information about api .
+ the common methods for adding information into an API endpoint:
+
+1. POST Requests: This is the most widely used method for creating new resources within an API. It involves sending a payload of data in the request body to the endpoint. This payload typically follows a structured format like JSON (JavaScript Object Notation) or XML (Extensible Markup Language).
+
+2. PUT Requests: PUT requests are for updating existing resources completely. They also use a request body containing the entire updated data for the resource being modified.
+
+3. PATCH Requests: PATCH requests provide a more granular way to update specific aspects of a resource. Unlike PUT, which replaces the entire resource data, PATCH allows for targeted modifications. The request body in PATCH specifies the changes to be made using formats like JSON Patch or MERGE.
+
+4. URL Parameters:  While not ideal for large amounts of data, URL parameters can be used to add specific information to an endpoint. Parameters are appended to the endpoint URL after a question mark (?), with each parameter taking the format of key=value. This method is suitable for sending concise data like filter criteria or sorting options.
+
+Choosing the Right Method:
+
+The appropriate method depends on the specific action you intend to perform on the API resource:
+
+Use POST to create a new resource entirely.
+Use PUT to entirely replace an existing resource.
+Use PATCH to modify specific parts of a resource.
+Use URL parameters for concise data additions like filtering or sorting.
+Remember, API documentation is your best friend. It will detail the supported methods for each endpoint and the expected data format for requests.
+# request and reponse headers :-
+* In the world of APIs, request and response headers act like mini-messages attached to the actual data being exchanged. They provide crucial context and instructions for a smooth interaction between your application and the API server.

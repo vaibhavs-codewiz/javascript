@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fetch</title>
+</head>
+<body>
+  </body>
+<script>
+  let url = "https://catfact.ninja/fact";
+
+  fetch(url)
+    .then((res) => {
+      console.log(res);
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data.fact); // Access the joke from the data
+    })
+    .catch((err) => {
+      console.error(err); // Use console.error for errors
+    });
+</script>
+</html>
