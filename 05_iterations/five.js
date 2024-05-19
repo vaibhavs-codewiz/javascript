@@ -26,7 +26,7 @@ myNums.forEach( (item) => {
 
 console.log(newarr);
 
-//task : use filter to get user requiremetn book from guven array:
+//task : use filter to get user requirement book from given array:
 
 const books = [
   { title: "Book One", genre: "Fiction", publish: 1981, edition: 2004 },
