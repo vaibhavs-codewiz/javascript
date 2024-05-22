@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-style: gilroy;
+    color: aliceblue;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    height: 15%;
+    width: 100%;
+}
+#nav h2{
+    margin-left: 30px;
+}
+#part2{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 80px;
+    margin: 0px 30px;
+}
+body{
+    background-color: black;
+}
+#box1{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+}
+#box2{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+}
+#box3{
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+}
+.sqr{
+    height: 50px;
+    width: 50px;
+    background-color: bisque;
+}
+

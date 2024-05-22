@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-style: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    overflow-x: hidden;/*hides the overflowed text along x(stop x scrolling)*/
+}
+#newpage1{
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+#newpage2{
+    height: 100%;
+    width: 100%;
+    background: lightskyblue;
+}
+#newpage2 h1{
+   font-size: 40vw; /*vw is viewport width it works like percentage unit.10vw is
+                   equivalent to occupying 10% of entire visible screen width */
+    text-transform: uppercase;
+
+}
+#newpage3{
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: #704264;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #5D0E41;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: #704264;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #5D0E41;
+    flex-direction: column;
+    gap: 60px;
+}
+#page2 h1{
+    font-size: 50px;
+    background-color: orangered;
+    border-radius: 25px;
+    padding: 25px;
+    color:black;
+}
+#page2 h2{
+    font-size: 30px;
+    background-color: yellowgreen;
+    border-radius: 25px;
+    padding: 25px;
+    color:black;
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: #704264;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #5D0E41;
+}
+#page4{
+     height: 100%;
+    width: 100%;
+    background-color: #704264;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #5D0E41;
+}
+#box{
+    height: 200px;
+    width: 200px;
+    background-color: #BB8493;
+}
