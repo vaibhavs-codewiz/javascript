@@ -18,7 +18,7 @@ APIs can be complex, but with practice and the right tools, programmers can beco
 is just a set of rules and they each decide different rule sets for creating APIs.
 * Application Programming Interface, is essentially a set of rules that defines how applications can talk to each other.  Imagine it like a special language with instructions for how to request and receive information.
 
-* use case of api , request response cycle (requesting url, server responding) with api in place of server will send as raw data(send object) which does not lead whole page with html, css, js but help to achieve specific task like in instagram liking the post only increase like couont and does not load whole page is achieve using api call.
+* use case of api , request response cycle (requesting url, server responding) with api in place of server will send as raw data(send object) which does not lead whole page with html, css, js but help to achieve specific task like in instagram liking the post only increase like count and does not load whole page is achieve using api call.
 
 * we receive data in JSON format , and access this api using a link also called endpoint .
 

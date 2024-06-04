@@ -51,6 +51,9 @@ function getrandomNum() {
   });
 }
 //if not use await random num will display simuntanously without any delay.
+// getrandomNum();
+// getrandomNum();
+// getrandomNum();
 async function demo() {
   try {
     await getrandomNum();
@@ -59,6 +62,6 @@ async function demo() {
   } catch (err) {
     console.log('error caught ' + err);
   }
-
-  //handling rejection in async await :-write the code that can create error in try
+//handling rejection in async await :-write the code that can create error in try
 }
+demo();

@@ -53,3 +53,29 @@ promiseFour
     console.log(error);
   })
   .finally(() => console.log("The promise is either resolved or rejected"));
+//finally use to indicate that promise is either reolve or reject.
+
+//async and await : this is another way to handel the asynchronous task.
+
+const promiseFive = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    let number = Math.random() * 10;
+    if (number > 5) {
+      resolve("sucess");
+    } else {
+      reject("error");
+    }
+  }, 1000);
+});
+
+//it is mandatory to handle the error in async function using catch:
+async function consumePromise() {
+ try {
+    let response = await promiseFive;
+   console.log(response);
+}
+catch (error) {
+console.log(error);
+}
+}
+consumePromise();
