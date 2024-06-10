@@ -24,7 +24,7 @@ console.log(a);//undefined
 
 //in function hoisting the declaration of the fucntions is kept at top by js
 //so we feel like executing the function before its declaration .
-//remember oisting is only possible for the function declared with the keyword function .
+//remember hoisting is only possible for the function declared with the keyword function .
 
 //closure in js , it access the things near to function even if not in the same scope.
 
@@ -33,7 +33,7 @@ let c = 10;
 //iffy function uses the c even if not in scope.
 
 //when there is higher order function :-
-//this hhigher prder function are also called as factory function.
+//this higher order function are also called as factory function.
 
 function subt(a,b){
     return ()=>{
