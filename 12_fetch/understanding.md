@@ -1,5 +1,9 @@
 # fetch 
 the execution of fetch event is done even before any other asynchronous event when they are schedule at same time this is because the for fetch tasks there is special microtask queue(fetch queue/ priority queue) is created which give them prirority over the task which are present in call back queue(task queue).
+* microtask quese only contains the function from promises and mutation observer.
+* The MutationObserver interface provides the ability to watch for changes being made to the DOM tree.
+* if there are 3 function in microtask queue and only 1 task in task queue , in this case at first all the task of microtask queue gets executed and then only the tasks of call back queue are performed.
+* task of task queue starvation : this happen when the tasks of priority queue are generating similar kind of prior task , in that the task in callback queue have to wait for too long to get its turn .
 
 # response = fetch(url)
 when fetch is called for url , 2 task initiated one is in web browser/node where network request is made and second is in memory where variable is created which is dependent on 2 arrays namely onfulfilled[] and on rejection[] onulfilled receive the response from webserver (404 page not found is also a response) and fill the varaiable accordingly and then it get pass to response variable , and similarly there is another array called onrejection() .
